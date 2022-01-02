@@ -1,0 +1,229 @@
+@font-face { 
+    font-family: "GilroyMedium";
+    src: url("../fonts/Gilroy-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face { 
+    font-family: "GilroyBold";
+    src: url("../fonts/Gilroy-Bold.ttf") format("truetype");
+    font-style: bold;
+    font-weight: 500;
+}
+
+$black: #070707;
+$gray: #828282;
+$bg_gray: #f6f6f6;
+
+body, html{
+    font-family: "GilroyMedium", sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.wrapper{
+    width: 943px;
+    margin: 0 auto;
+}
+hr{
+    margin: 0;
+    border: none;
+    background-color: $gray;
+    color: $gray;
+    height: 1px;
+}
+.gray-bg{
+    background-color: $bg_gray;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    font-family: "GilroyBold";
+    font-size: 18px;
+    font-weight: bold;
+    height: 88px;
+    padding-left: 0;
+    margin: 0;
+    &-link{
+        text-decoration: none;
+        color: $gray;
+        transition: 0.3s;
+        &:hover{
+            color: $black;
+        }
+    }
+}
+.default-text{
+    font-size: 18px;
+    color: $black;
+}
+.default-h1{
+    font-family: "GilroyBold";
+    font-size: 34px;
+    font-style: bold;
+    margin: 0;
+}
+.intro{
+    padding-bottom: 105px;
+    &-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        h1{
+            font-family: "GilroyBold";
+            font-size: 47px;
+            font-weight: bold;
+        }
+        &__buttons{
+            transform: rotate(-90deg);
+            padding-top: 66px;
+            padding-right: 23px;
+            input{
+                display: none;
+            }
+            label{
+                cursor: pointer;
+            }
+            input:checked + label{
+                font-weight: bold;
+            }
+            
+        }
+        p{
+            margin-top: 37px;
+            margin-bottom: 0;
+            margin-left: 15px;
+        }
+        h1{
+            margin-top: 24px;
+        }
+    }
+    &-photo{
+        img{
+            width: 100%;
+        }
+    }
+
+}
+
+.about{
+    padding-top: 111px;
+    padding-bottom: 108px;
+    &-text{
+        text-align: center;
+        margin: 0 auto;
+        width: 485px;
+    }
+}
+
+.skills{
+    padding-top: 80px;
+    padding-bottom: 113px;
+    text-align: center;
+    .default-text{
+        padding: 40px 0;
+    }
+    &-progs{
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        font-family: "GilroyBold";
+        color: $gray;
+        &__rating{
+            display: flex;
+            justify-content: space-between;
+            font-size: 26px;
+            color: $black;
+            margin: 0;
+        }
+        &__title{
+            font-size: 14px;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+        &-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 207px;
+            width: 167px;
+            margin-bottom: 60px;
+        }
+    }
+    &-icon{
+        height: 88px;
+    }
+}
+.zmdi-star-empty{
+    color: #e5e5e5;
+}
+
+.portfolio{
+    text-align: center;
+    padding-top: 103px;
+    padding-bottom: 55px;
+    &-item{
+        padding-top: 55px;
+        padding-bottom: 48px;
+        img{
+            width: 100%;
+            padding-bottom: 38px;
+        }
+    }
+}
+
+.contacts{
+    text-align: center;
+    padding-top: 105px;
+    padding-bottom: 55px;
+    h1{
+        padding-bottom: 8px;
+    }
+    .default-text{
+        margin-bottom: 43px;
+    }
+    &-message{
+        font-family: "GilroyBold";
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px 30px;
+        background-color: $black;
+        color: #fff;
+        border-radius: 30px;
+    }
+    &-social{
+        padding-top: 95px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 342px;
+        &__text{
+            margin-top: 40px;
+            font-size: 14px;
+            margin-bottom: 107px;
+        }
+    }
+}
+
+@media (max-width: 943px) {
+    .links{
+        justify-content: space-evenly;
+    }
+    .intro-text{
+        justify-content: space-evenly;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .skills-progs{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px){
+
+}
