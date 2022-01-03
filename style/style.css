@@ -81,6 +81,27 @@ hr {
     left: 0; }
   #menu-burger__toggle:checked ~ .menu-burger__lang {
     visibility: visible; }
+  #menu-burger__toggle:not(checked) ~ .menu-burger__btn span {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  #menu-burger__toggle:not(checked) ~ .menu-burger__btn span::before {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  #menu-burger__toggle:not(checked) ~ .menu-burger__btn span::after {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  #menu-burger__toggle:not(checked) ~ .menu-burger__links {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    visibility: hidden; }
+  #menu-burger__toggle:not(checked) ~ .menu-burger__lang {
+    visibility: hidden; }
 
 .menu-burger {
   visibility: hidden;

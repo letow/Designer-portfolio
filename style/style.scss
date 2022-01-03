@@ -88,6 +88,31 @@ hr{
             }
         }
     }
+    &:not(checked){
+        & ~ .menu-burger{
+            &__btn{
+                span{
+                    transition: 0.3s;
+                    transform: rotate(0);
+                }
+                span::before{
+                    transition: 0.3s;
+                    transform: rotate(0);
+                }
+                span::after{
+                    transition: 0.3s;
+                    transform: rotate(0);
+                }
+            }
+            &__links{
+                transition: 0.3s;
+                visibility: hidden;
+            }
+            &__lang{
+                visibility: hidden;
+            }
+        }
+    }
 }
 .menu-burger{
     visibility: hidden;
