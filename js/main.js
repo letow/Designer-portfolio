@@ -13,7 +13,7 @@ var arrLang = {
       'reebok-store': 'Reebok Store - Concept',
       'braun-landing': 'Braun Landing Page - Concept',
       'contact-text': 'Want to know more or just chat?<br/>You are welcome!',
-      'send': 'Send Message',
+      'send': 'Send&nbsp;Message',
       'bottom-text': 'Like me on<br/>LinkedIn, Instagram, Behance, Dribbble',
     },
     'ru': {
@@ -30,7 +30,7 @@ var arrLang = {
       'reebok-store': 'Магазин Reebok - Концепт',
       'braun-landing': 'Лэндинг Braun - Концепт',
       'contact-text': 'Хочешь узнать больше или просто поболтать?<br/>Пожалуйста!',
-      'send': 'Отправить сообщение',
+      'send': 'Отправить&nbsp;сообщение',
       'bottom-text': 'Лайкайте меня на<br/>LinkedIn, Instagram, Behance, Dribbble',
     }
   }
