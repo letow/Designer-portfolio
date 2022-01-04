@@ -79,16 +79,12 @@ hr{
                 }
             }
             &__links{
-                transition: 0.3s;
                 visibility: visible;
                 left: 0;
             }
-            &__lang{
-                visibility: visible;
-            }
         }
     }
-    &:not(checked){
+    &:not(:checked){
         & ~ .menu-burger{
             &__btn{
                 span{
@@ -105,10 +101,6 @@ hr{
                 }
             }
             &__links{
-                transition: 0.3s;
-                visibility: hidden;
-            }
-            &__lang{
                 visibility: hidden;
             }
         }
@@ -144,7 +136,6 @@ hr{
         }
     }
     &__links{
-        visibility: hidden;
         position: fixed;
         left: 0;
         top: 0;
@@ -165,34 +156,9 @@ hr{
             margin-bottom: 50px;
             text-decoration: none;
             color: $gray;
-            transition: 0.3s;
             &:hover{
                 color: $black;
             }
-        }
-    }
-    &__lang{
-        visibility: hidden;
-        position: fixed;
-        font-size: 34px;
-        right: 20px;
-        bottom: 60px;
-        font-family: "GilroyBold";
-        font-style: bold;
-        writing-mode: vertical-rl;
-        width: 20px;
-        input{
-            display: none;
-        }
-        label{
-            cursor: pointer;
-            color: $gray;
-            b{
-                color: $black;
-            }
-        }
-        input:checked + label{
-            color: $black;
         }
     }
 }
@@ -219,6 +185,7 @@ hr{
             font-weight: bold;
         }
         &__buttons{
+            visibility: visible;
             font-family: "GilroyBold";
             font-style: bold;
             writing-mode: vertical-rl;
@@ -368,6 +335,9 @@ hr{
     .wrapper{
         width: 90%;
     }
+    .intro-text__buttons{
+        visibility: visible;
+    }
     .skills-progs{
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -395,8 +365,11 @@ hr{
             align-items: flex-start;
             flex-direction: column;
             &__buttons{
-                position: absolute;
                 visibility: hidden;
+                position: fixed;
+                right: 10%;
+                bottom: 60px;
+                font-size: 34px;
             }
             h1{
                 margin-bottom: 0;
@@ -406,13 +379,18 @@ hr{
             }
         }
     }
-    .links, hr{
+    .links{
         position: absolute;
         visibility: hidden;
+        &-link{
+            transition: 0s;
+        }
+    }
+    hr{
+        display: none;
     }
     .menu-burger{
         visibility: visible;
-        
     }
     .contacts-social{
         width: 92%;

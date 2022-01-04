@@ -75,32 +75,24 @@ hr {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
   #menu-burger__toggle:checked ~ .menu-burger__links {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
     visibility: visible;
     left: 0; }
-  #menu-burger__toggle:checked ~ .menu-burger__lang {
-    visibility: visible; }
-  #menu-burger__toggle:not(checked) ~ .menu-burger__btn span {
+  #menu-burger__toggle:not(:checked) ~ .menu-burger__btn span {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     -webkit-transform: rotate(0);
             transform: rotate(0); }
-  #menu-burger__toggle:not(checked) ~ .menu-burger__btn span::before {
+  #menu-burger__toggle:not(:checked) ~ .menu-burger__btn span::before {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     -webkit-transform: rotate(0);
             transform: rotate(0); }
-  #menu-burger__toggle:not(checked) ~ .menu-burger__btn span::after {
+  #menu-burger__toggle:not(:checked) ~ .menu-burger__btn span::after {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     -webkit-transform: rotate(0);
             transform: rotate(0); }
-  #menu-burger__toggle:not(checked) ~ .menu-burger__links {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    visibility: hidden; }
-  #menu-burger__toggle:not(checked) ~ .menu-burger__lang {
+  #menu-burger__toggle:not(:checked) ~ .menu-burger__links {
     visibility: hidden; }
 
 .menu-burger {
@@ -133,7 +125,6 @@ hr {
       content: '';
       top: 8px; }
   .menu-burger__links {
-    visibility: hidden;
     position: fixed;
     left: 0;
     top: 0;
@@ -160,32 +151,9 @@ hr {
     .menu-burger__links-item {
       margin-bottom: 50px;
       text-decoration: none;
-      color: #828282;
-      -webkit-transition: 0.3s;
-      transition: 0.3s; }
+      color: #828282; }
       .menu-burger__links-item:hover {
         color: #070707; }
-  .menu-burger__lang {
-    visibility: hidden;
-    position: fixed;
-    font-size: 34px;
-    right: 20px;
-    bottom: 60px;
-    font-family: "GilroyBold";
-    font-style: bold;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-    width: 20px; }
-    .menu-burger__lang input {
-      display: none; }
-    .menu-burger__lang label {
-      cursor: pointer;
-      color: #828282; }
-      .menu-burger__lang label b {
-        color: #070707; }
-    .menu-burger__lang input:checked + label {
-      color: #070707; }
 
 .default-text {
   font-size: 18px;
@@ -215,6 +183,7 @@ hr {
       font-size: 47px;
       font-weight: bold; }
     .intro-text__buttons {
+      visibility: visible;
       font-family: "GilroyBold";
       font-style: bold;
       -webkit-writing-mode: vertical-rl;
@@ -359,6 +328,9 @@ hr {
   .wrapper {
     width: 90%; }
 
+  .intro-text__buttons {
+    visibility: visible; }
+
   .skills-progs {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
@@ -389,16 +361,25 @@ hr {
         -ms-flex-direction: column;
             flex-direction: column; }
     .intro-text__buttons {
-      position: absolute;
-      visibility: hidden; }
+      visibility: hidden;
+      position: fixed;
+      right: 10%;
+      bottom: 60px;
+      font-size: 34px; }
     .intro-text h1 {
       margin-bottom: 0; }
     .intro-text p {
       margin-bottom: 37px; }
 
-  .links, hr {
+  .links {
     position: absolute;
     visibility: hidden; }
+    .links-link {
+      -webkit-transition: 0s;
+      transition: 0s; }
+
+  hr {
+    display: none; }
 
   .menu-burger {
     visibility: visible; }
